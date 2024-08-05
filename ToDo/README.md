@@ -1,6 +1,6 @@
 # My TO-DO-LIST
 
-This is a simple To-Do List web application that allows users to add,edit, view, and manage their tasks. It also includes a theme switcher to toggle between light and dark modes.
+This is a simple To-Do List web application that allows users to add,edit,view and manage their tasks. It also includes a theme switcher to toggle between modes.
 
 ![alt text](<Screenshot 2024-08-05 at 1.52.39 in the afternoon.png>)
 
