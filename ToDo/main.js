@@ -24,6 +24,11 @@ function addTask() {
     let mySpan = document.createElement("span");
     mySpan.textContent = taskDescription.value;
 
+    let edit = document.createElement("button");
+    edit.className = "completed";
+    edit.id = "edit";
+    edit.textContent = "edit";
+
     let complete = document.createElement("button");
     complete.className = "completed";
     complete.textContent = "Completed";
@@ -39,10 +44,15 @@ function addTask() {
       deleteButton(myDiv);
     });
 
+    edit.addEventListener("click", function () {
+      editButton(taskTitle, mySpan);
+    });
+
     innerDiv.append(taskTitle);
     innerDiv.append(mySpan);
 
     myDiv.append(innerDiv);
+    myDiv.append(edit);
     myDiv.append(complete);
     myDiv.append(dele);
 
@@ -64,6 +74,7 @@ function completeButton(myDiv, taskTitle, mySpan, complete) {
   mySpan.style.textDecoration = "line-through";
   taskTitle.style.textDecoration = "line-through";
   myDiv.removeChild(complete);
+  myDiv.removeChild(edit);
   saveData();
 }
 
@@ -81,12 +92,19 @@ function attachEventListeners() {
   tasks.forEach((task) => {
     const complete = task.querySelector(".completed");
     const dele = task.querySelector(".delete");
+    const edit = task.querySelector("#edit");
     const taskTitle = task.querySelector("h2");
     const mySpan = task.querySelector("span");
 
     if (complete) {
       complete.addEventListener("click", function () {
         completeButton(task, taskTitle, mySpan, complete);
+      });
+    }
+
+    if (edit) {
+      edit.addEventListener("click", function () {
+        editButton(taskTitle, mySpan);
       });
     }
 
@@ -117,4 +135,10 @@ function change() {
   } else {
     changeToOrange();
   }
+}
+
+function editButton(taskTitle, mySpan) {
+  taskTitle.textContent = prompt("Task Name");
+  mySpan.textContent = prompt("Task description");
+  saveData();
 }
