@@ -9,7 +9,7 @@ This is a simple To-Do List web application that allows users to add, view, and 
 - **Add Tasks**: Users can add tasks with a name and description.
 - **View Tasks**: Tasks are displayed in a list format.
 - **Manage Tasks**: Users can mark tasks as completed or delete them.
-- **Theme Switcher**: Toggle between light and dark themes.
+- **Theme Switcher**: Toggle between themes.
 
 ## Installation
 
@@ -43,7 +43,7 @@ This is a simple To-Do List web application that allows users to add, view, and 
      - Delete the task by clicking the `Delete` button.
 
 3. **Theme Switcher:**
-   - Click the theme button to toggle between light and dark themes.
+   - Click the theme button to toggle between themes.
 
 ![alt text](<Screenshot 2024-08-05 at 9.22.05 in the morning.png>)
 
