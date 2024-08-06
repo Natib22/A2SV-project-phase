@@ -2,7 +2,7 @@
 
 This is a simple To-Do List web application that allows users to add,edit,view and manage their tasks. It also includes a theme switcher to toggle between modes.
 
-![alt text](</screenshots/Screenshot 2024-08-05 at 1.52.39 in the afternoon.png>)
+![alt text](<screenshots/Screenshot 2024-08-05 at 1.52.39 in the afternoon.png>)
 
 ## Features
 
@@ -50,9 +50,9 @@ This is a simple To-Do List web application that allows users to add,edit,view a
      - Delete the task by clicking the `Delete` button.
 
 3. **Theme Switcher:**
-   - Click the theme button to toggle between themes.
+   - Click the theme button to toggle between themes.s
 
-![alt text](</screenshots/Screenshot 2024-08-05 at 1.53.12 in the afternoon.png>)
+![alt text](<screenshots/Screenshot 2024-08-05 at 1.53.12 in the afternoon.png>)
 
 ## Project Structure
 
