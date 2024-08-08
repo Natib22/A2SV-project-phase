@@ -29,13 +29,15 @@ const Task = ({ name, description }: task) => {
         <div className="flex justify-between border-b-stone-900 border-b-2 border-black">
           <div className="ml-7">
             <p
-              className={`text-3xl text-orange-400 ${
+              className={`text-2xl text-orange-400 ${
                 completeFlag ? "line-through" : ""
               }`}
             >
               {editedName}
             </p>
-            <p className="text-xl">{editedDescription}</p>
+            <p className={`text-xl  ${completeFlag ? "line-through" : ""}`}>
+              {editedDescription}
+            </p>
           </div>
 
           <div className="mr-8 flex items-center justify-between w-56">
