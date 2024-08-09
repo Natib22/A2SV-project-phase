@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { FaPaperPlane } from "react-icons/fa";
 
 interface FormData {
   name: string;
@@ -15,7 +16,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white w-1/3 h-500 mx-auto mt-16 rounded-lg">
+    <div className="flex flex-col bg-white w-1/3 h-500 mx-auto mt-16 rounded-lg border border-gray-200 shadow-custom-light transform transition duration-300 hover:shadow-2xl hover:-translate-y-2">
       <h1 className="text-2xl text-customPink mb-10 text-center mt-3">
         Contact Form
       </h1>
@@ -28,7 +29,7 @@ const App = () => {
             errors.name
               ? "border-red-500 border-opacity-100"
               : "border-purple-500"
-          }  focus:outline-none my-2 mx-4 h-11 focus:border-opacity-100`}
+          }  focus:outline-none my-2 mx-4 h-11 focus:border-opacity-100 placeholder-customPink`}
           {...register("name", {
             required: "Name is required",
           })}
@@ -43,7 +44,7 @@ const App = () => {
             errors.email
               ? "border-red-500 border-opacity-100"
               : "border-purple-500"
-          }  focus:outline-none my-2 mx-4 h-11 focus:border-opacity-100`}
+          }  focus:outline-none my-2 mx-4 h-11 focus:border-opacity-100 placeholder-customPink`}
           {...register("email", {
             required: "email is required",
             pattern: {
@@ -61,7 +62,7 @@ const App = () => {
             errors.name
               ? "border-red-500 border-opacity-100"
               : "border-purple-500"
-          }  border-opacity-30 focus:outline-none my-4 mx-4 min-h-16 resize-none overflow-visible focus:border-opacity-100`}
+          }  border-opacity-30 focus:outline-none my-4 mx-4 min-h-16 resize-none overflow-visible focus:border-opacity-100 placeholder-customPink`}
           {...register("Message", {
             validate: (data) => {
               return (
@@ -75,7 +76,7 @@ const App = () => {
         </p>
 
         <button className="bg-customPink rounded-lg h-12 mx-3 mt-20 text-white">
-          Submit
+          Submit <FaPaperPlane className="inline-block" />
         </button>
       </form>
     </div>

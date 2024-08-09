@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html , body {
-  background-color: #2E0249;
+html, body {
   height: 100vh;
+  background: linear-gradient(to bottom, white, white 85%, black);
 }
+
+

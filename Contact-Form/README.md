@@ -2,7 +2,7 @@
 
 This is a simple Contact Form web application built with React, TypeScript and Vite. The form collects a user's name, email, and message, and includes validation to ensure that the data entered is in the correct format.
 
-![alt text](<Screenshot 2024-08-08 at 7.56.51 in the evening.png>)
+![alt text](<Screenshot 2024-08-09 at 10.03.06 in the morning.png>)
 
 ## Features
 
@@ -64,7 +64,7 @@ This is a simple Contact Form web application built with React, TypeScript and V
    - Click the `Submit` button to submit the form.
    - Validation errors, if any, will be displayed next to the respective fields, and the fields will be highlighted in red.
 
-![alt text](<Screenshot 2024-08-08 at 8.02.39 in the evening.png>)
+![alt text](<Screenshot 2024-08-09 at 10.04.06 in the morning.png>)
 
 ## Project Structure
 

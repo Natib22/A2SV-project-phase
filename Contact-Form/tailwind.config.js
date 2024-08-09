@@ -13,6 +13,9 @@ export default {
         600: "600px",
         800: "800px",
       },
+      boxShadow: {
+        "custom-light": "0 0 10px rgba(0, 0, 0, 0.2)",
+      },
     },
   },
   plugins: [],
