@@ -16,7 +16,7 @@ This project is a job listing platform built with React and TypeScript. It allow
 
 ![alt text](<./screenshots/Screenshot 2024-08-10 at 3.15.35 in the afternoon.png>)
 
-## Project Structure
+
 
 
 ## Installation
