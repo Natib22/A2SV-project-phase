@@ -1,10 +1,10 @@
-Here’s a GitHub `README.md` file template for your project. This template provides an overview of the project, installation instructions, and guidance on how to run it.
 
-```markdown
+
 # Job Listing Platform
 
 This project is a job listing platform built with React and TypeScript. It allows users to view job opportunities and sort them by relevance or alphabetically. The project utilizes Tailwind CSS for styling and includes various components like `JobCard` and `JobLister` to manage and display job data.
 
+![alt text](localhost_3000_.png)
 
 ## Features
 - **Job Listing**: Displays a list of job opportunities with detailed descriptions.
@@ -12,24 +12,12 @@ This project is a job listing platform built with React and TypeScript. It allow
 - **Responsive Design**: The application is designed to work on various screen sizes.
 - **Dynamic Routing**: Navigate to detailed job views using dynamic routing.
 
+![alt text](<localhost_3000_ (1).png>)
+
+![alt text](<Screenshot 2024-08-10 at 3.15.35 in the afternoon.png>)
+
 ## Project Structure
-```
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   │   ├── JobCard.tsx
-│   ├── data/
-│   │   ├── jobs.json
-│   ├── pages/
-│   │   ├── JobLister.tsx
-│   ├── App.tsx
-│   ├── index.tsx
-│   ├── main.tsx
-│   └── ...
-├── package.json
-└── README.md
-```
+
 
 ## Installation
 
@@ -37,7 +25,8 @@ To get started with the project, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/job-listing-platform.git
+   git clone https://github.com/Natib22/A2SV-project-phase
+   cd A2SV-project-phase
    cd job-listing-platform
    ```
 
@@ -51,8 +40,6 @@ To get started with the project, follow these steps:
    yarn install
    ```
 
-3. **Set up the environment**:
-   (Optional) If your project requires any environment variables, create a `.env` file in the root directory and add the necessary variables.
 
 ## Running the Project
 
