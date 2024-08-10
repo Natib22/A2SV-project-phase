@@ -4,7 +4,7 @@
 
 This project is a job listing platform built with React and TypeScript. It allows users to view job opportunities and sort them by relevance or alphabetically. The project utilizes Tailwind CSS for styling and includes various components like `JobCard` and `JobLister` to manage and display job data.
 
-![alt text](localhost_3000_.png)
+![alt text](./screenshots/localhost_3000_.png)
 
 ## Features
 - **Job Listing**: Displays a list of job opportunities with detailed descriptions.
@@ -12,9 +12,9 @@ This project is a job listing platform built with React and TypeScript. It allow
 - **Responsive Design**: The application is designed to work on various screen sizes.
 - **Dynamic Routing**: Navigate to detailed job views using dynamic routing.
 
-![alt text](<localhost_3000_ (1).png>)
+![alt text](<./screenshots/localhost_3000_ (1).png>)
 
-![alt text](<Screenshot 2024-08-10 at 3.15.35 in the afternoon.png>)
+![alt text](<./screenshots/Screenshot 2024-08-10 at 3.15.35 in the afternoon.png>)
 
 ## Project Structure
 
