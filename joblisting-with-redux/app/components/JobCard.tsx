@@ -1,6 +1,8 @@
-import React from "react";
-import data from "../data/jobs.json";
+// import React from "react";
+"use client";
 import imageMap from "../assets/ImageMap";
+import Image from "next/image";
+import { useRouter } from 'next/navigation';
 
 
 interface IdealCandidate {
@@ -28,6 +30,8 @@ interface JobListing {
   about: About;
   company: string;
   image: string;
+  index: number
+
 }
 
 
@@ -35,14 +39,14 @@ interface JobListing {
 
 
 
-const JobCard = ({title , image,company , about , description}: JobListing) => {
-  const job : JobListing[] = data.job_postings;
-  const singleJob = job[0];
-  const imageSrc = imageMap[image] || imageMap['job1.png'];
+const JobCard = ({title , image,company , about , description , index }: JobListing) => {
   
-  return <div className="flex justify-evenly h-[262px] mt-8 rounded-3xl p-[26px] gap-6 border border-[#D6DDEB] ">
+  const imageSrc = imageMap[image] || imageMap['job1.png'];
+  const navigate = useRouter()
+  
+  return <div onClick={() => navigate.push(`/job/${index}`)} className="flex justify-evenly h-[262px] mt-8 rounded-3xl p-[26px] gap-6 border border-[#D6DDEB] hover:bg-gray-200 ">
     
-      <img className="h-[59px] w-[66px]" src={imageSrc} alt="job image" />
+      <Image className="h-[59px] w-[66px]" src={imageSrc} alt="job image" />
     
 
     <div className="flex gap-2 flex-col  ">
@@ -54,7 +58,7 @@ const JobCard = ({title , image,company , about , description}: JobListing) => {
       <p className="flex items-center bg-[#56CDAD1A] text-xs text-[#56CDAD] rounded-2xl h-full w-[76] py-1 px-2">in person</p>
       <p>|</p>
       <p  className="flex justify-center items-center text-xs text-yellow-500 border-yellow-500 min-w-20 max-w-24 border rounded-2xl h-full py-1 px-2">{about.categories[0]}</p>
-      <p className="flex justify-center items-center text-xs text-blue-900 border-blue-900 min-w-20 w-auto border rounded-2xl h-full py-1 px-2">{singleJob.about.categories[1]}</p>
+      <p className="flex justify-center items-center text-xs text-blue-900 border-blue-900 min-w-20 w-auto border rounded-2xl h-full py-1 px-2">{about.categories[1]}</p>
 
     </div>
 
