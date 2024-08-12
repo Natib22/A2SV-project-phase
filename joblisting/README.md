@@ -27,7 +27,9 @@ To get started with the project, follow these steps:
    ```bash
    git clone https://github.com/Natib22/A2SV-project-phase
    cd A2SV-project-phase
-   cd job-listing-platform
+
+   cd joblisting
+
    ```
 
 2. **Install dependencies**:
