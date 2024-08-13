@@ -1,35 +1,11 @@
 import React from 'react'
 
-interface IdealCandidate {
-    age: string;
-    gender: string;
-    traits: string[];
-  }
-  
-  interface About {
-    posted_on: string;
-    deadline: string;
-    location: string;
-    start_date: string;
-    end_date: string;
-    categories: string[];
-    required_skills: string[];
-  }
-  
-  interface JobListing {
-    title: string;
-    description: string;
-    responsibilities: string[];
-    ideal_candidate: IdealCandidate;
-    when_where: string;
-    about: About;
-    company: string;
-    image: string;
-    
-  }
-  
+import { JobData } from '../features/api/apiInterface'
   // Correct the component definition
-  const RightJobDescription: React.FC<{ job: JobListing }> = ({ job }) =>{
+  const RightJobDescription: React.FC<{ job: JobData}> = ({ job }) =>{
+    if (!job){
+    return <p>Loading</p>
+    }
   return (
     <>
     <h1 className='text-2xl font-black leading-[28.8px] text-left'>about</h1>
@@ -43,7 +19,7 @@ interface IdealCandidate {
         </span>
       <div className='flex flex-col gap-1'>
         <p className='text-[#515B6F]'>Posted On</p>
-        <p className='font-semibold'>{job.about.posted_on}</p>
+        <p className='font-semibold'>{job.datePosted.slice(0,10)}</p>
       </div>
 
     </div>
@@ -56,7 +32,7 @@ interface IdealCandidate {
         </span>
       <div className='flex flex-col gap-1'>
         <p className='text-[#515B6F]'>Dead Line</p>
-        <p className='font-semibold'>{job.about.deadline}</p>
+        <p className='font-semibold'>{job.deadline.slice(0,10)}</p>
       </div>
 
     </div>
@@ -70,7 +46,7 @@ interface IdealCandidate {
         </span>
       <div className='flex flex-col gap-1'>
         <p className='text-[#515B6F]'>Location</p>
-        <p className='font-semibold'>{job.about.location}</p>
+        <p className='font-semibold'>{job.location}</p>
       </div>
 
     </div>
@@ -82,8 +58,8 @@ interface IdealCandidate {
           </svg>
         </span>
       <div className='flex flex-col gap-1'>
-        <p className='text-[#515B6F]'>Location</p>
-        <p className='font-semibold'>{job.about.location}</p>
+        <p className='text-[#515B6F]'>Start Date</p>
+        <p className='font-semibold'>{job.startDate.slice(0,10)}</p>
       </div>
 
     </div>
@@ -99,7 +75,7 @@ interface IdealCandidate {
         </span>
       <div className='flex flex-col gap-1'>
         <p className='text-[#515B6F]'>End Date</p>
-        <p className='font-semibold'>{job.about.end_date}</p>
+        <p className='font-semibold'>{job.endDate.slice(0,10)}</p>
       </div>
 
     </div>
@@ -111,11 +87,11 @@ interface IdealCandidate {
 
     <div className='flex flex-col gap-6'>
       <h1 className='text-2xl font-black leading-[28.8px] text-left'>Catagories</h1>
-      <div className='flex gap-2'>
+      <div className='flex gap-2 flex-wrap'>
 
-        {job.about.categories.map((category , index) => (
-          index % 2 == 0 ? <p key={index} className="flex items-center justify-center bg-[#56CDAD1A] text-xs text-[#56CDAD] rounded-2xl h-[31px] min-w-20 w-auto  py-1 px-3">{category}</p> 
-          : <p key={index} className="flex items-center justify-center bg-[#EB85331A] text-xs text-[#FFB836] rounded-2xl h-[31px] min-w-20 w-auto  py-1 px-3">{category}</p>
+        {job.categories.map((category , index) => (
+          index % 2 == 0 ? <p key={index} className="flex items-center justify-center bg-[#56CDAD1A] text-xs text-[#56CDAD] rounded-2xl h-[31px] text-nowrap w-auto  py-1 px-3">{category}</p> 
+          : <p key={index} className="flex items-center justify-center bg-[#EB85331A] text-xs text-[#FFB836] rounded-2xl h-[31px] text-nowrap w-auto  py-1 px-3">{category}</p>
         ))}
 
       
@@ -131,7 +107,7 @@ interface IdealCandidate {
     <div className='flex flex-col gap-6'>
       <h1 className='text-2xl font-black leading-[28.8px] text-left'>Required Skills</h1>
       <div className='flex gap-2 flex-wrap'>
-        {job.about.required_skills.map((skill , i) => (
+        {job.requiredSkills.map((skill , i) => (
             <p key = {i}className="flex items-center justtify-center font-epilogue text-base bg-[#F8F8FD]  text-[#4640DE]  h-[37px] min-w-20 w-auto  py-1 px-3">{skill}</p>
         )) }
       

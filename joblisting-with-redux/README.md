@@ -2,19 +2,28 @@
 
 # Job Listing Platform
 
-This project is a job listing platform built with React and TypeScript. It allows users to view job opportunities and sort them by relevance or alphabetically. The project utilizes Tailwind CSS for styling and includes various components like `JobCard` and `JobLister` to manage and display job data.
+This project is a job listing platform built with NextJs and TypeScript. It allows users to view job opportunities and sort them by relevance or alphabetically. The project utilizes Tailwind CSS for styling and includes various components like JobCard and JobLister to manage and display job data. State management and data fetching are handled using Redux and RTK Query, providing a robust and scalable architecture.
 
 ![alt text](./screenshots/localhost_3000_.png)
+
+
+
 
 ## Features
 - **Job Listing**: Displays a list of job opportunities with detailed descriptions.
 - **Sorting Functionality**: Sort job listings by "Most relevant" or "Alphabetically."
 - **Responsive Design**: The application is designed to work on various screen sizes.
 - **Dynamic Routing**: Navigate to detailed job views using dynamic routing.
+- **State Management with Redux**: Global state management is implemented using Redux, ensuring consistent state across the application.
+
+- **Data Fetching with RTK Query**: Efficient and powerful data fetching is handled by RTK Query, simplifying API integration.
+
+
+
 
 ![alt text](<./screenshots/localhost_3000_ (1).png>)
 
-![alt text](<./screenshots/Screenshot 2024-08-10 at 3.15.35 in the afternoon.png>)
+![alt text](<./screenshots/Screenshot 2024-08-13 at 10.32.28 in the morning.png>)
 
 
 
